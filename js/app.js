@@ -1,44 +1,44 @@
 var initialCats = [
     { 
-        cickCount: 0,
+        clickCount: 0,
         name: 'Tabby',
         imgSrc: 'img/22252709_010df3379e_z.jpg',
         nicknames:['Smiley']
     },
     { 
 
-        cickCount: 0,
+        clickCount: 0,
         name: 'Tiger',
         imgSrc: 'img/434164568_fea0ad4013_z.jpg',
         nicknames:['MAD']
     },
     { 
 
-        cickCount: 0,
+        clickCount: 0,
         name: 'Shadow',
-        imgSrc:9648464288_2516b35537_z 'img/1413379559_412a540d29_z.jpg',
+        imgSrc:'img/1413379559_412a540d29_z.jpg',
         nicknames:['Cool']
     },
     { 
 
-        cickCount: 0,
+        clickCount: 0,
         name: 'Tabby',
         imgSrc: 'img/4154543904_6e2428c421_z.jpg',
         nicknames:['Nami']
     },              
     { 
-        cickCount: 0,
+        clickCount: 0,
         name: 'Sali',
         imgSrc: 'img/9648464288_2516b35537_z.jpg',
         nicknames:['ZZZzz']
-    },               
+    }               
 ];
         
 var Cat = function(data) {
-    this.name = ko.observable(data.name);
+    this.name = data.name;
     this.numOfClicks = ko.observable(data.clickCount);
-    this.imgSrc = ko.observable(data.imgSrc);
-    this.nicknames = ko.observable(data.nicknames);
+    this.imgSrc = data.imgSrc;
+    this.nicknames = data.nicknames;
     this.level = ko.computed(function() {
         if (this.numOfClicks() < 10)
             return "level 1" ;
