@@ -62,6 +62,9 @@ var ViewModel = function() {
     this.incrementClicks = function(){
         self.currentCat().numOfClicks(self.currentCat().numOfClicks() + 1);
     };
+    this.setCurrentCat = function(cat) {
+        self.currentCat(cat);
+    }
     
 }
 
